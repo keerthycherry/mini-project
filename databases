@@ -1,0 +1,17 @@
+you need to create a database for example "student"
+under which we require 5 tables
+TABLES:
+1.create table register(id INT(11) Primary key auto_increment,name VARCHAR(15),rollnumber VARCHAR(10),branch VARCHAR(5),year
+VARCHAR(10),college VARCHAR(10),university VARCHAR(10),email VARCHAR(20),password VARCHAR(20),picsource VARCHAR(500));/* this table is used to authenticate a valid student,details
+of student are stored in this table on successfull registration*/
+
+2.create table admin(id INT(20) PRIMARY KEY auto_increment,aid VARCHAR(20),password  VARCHAR(20));
+/*only authenticated admins are allowed to login*/
+
+3.
+create table complaint(cid INT(11) PRIMARY KEY auto_increment,rollno VARCHAR(10),cdate date DEFAULT "current_timestamp()",hid VARCHAR(15),category
+ VARCHAR(25),title VARCHAR(30),description VARCHAR(100),status VARCHAR(10));
+ 
+ 4.create table map(rkey VARCHAR(5),rval VARCHAR(5));/*this table is used to generate a unique admin id for admin through which he can login*/
+ 
+ 5.create table action(cid INT(11) PRIMARY KEY auto_increment,caction VARCHAR(100));/* action taken by admin gets stored in this table*/
